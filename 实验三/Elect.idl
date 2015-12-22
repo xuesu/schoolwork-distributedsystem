@@ -1,0 +1,15 @@
+module ElectApp
+{
+	struct Elected
+	{
+		string name;
+		long poll;
+	};
+	exception noElected{};
+	typedef sequence<Elected> ElectedList;
+	interface Elect{
+		void getList(out ElectedList list);
+		void castVote(in string name)raises(noElected);
+		oneway void shutdown();
+	};
+};

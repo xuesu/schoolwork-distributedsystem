@@ -1,0 +1,1 @@
+java ElectApp.ElectServer -ORBInitialHost localhost -ORBInitialPort 8888
